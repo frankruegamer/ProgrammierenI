@@ -32,6 +32,10 @@ public class Reihenberechnung {
     }
 
     private static double reiheRek(int k) {
+        /**
+         * This method should not be called directly
+         * Use reiheRekt() instead!
+         */
         Function<Integer, Double> kFunc = x -> 1. / (x * x);
         if (Math.abs(kFunc.apply(k) - kFunc.apply(k - 1)) <= 10E-5) {
             return kFunc.apply(k);
