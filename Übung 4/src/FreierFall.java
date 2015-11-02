@@ -4,6 +4,7 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class FreierFall {
 
@@ -18,22 +19,19 @@ public class FreierFall {
     }
 
     public static void freierFall(int t) {
+        Consumer<Integer> sleep = s -> {
+            try { Thread.sleep(s * 1000);}
+            catch (InterruptedException e) { }
+        };
+
         final int step = 5;
 
         final double g = 9.80665;
-        sleep(1);
+        sleep.accept(1);
         for (int i = 1; i <= t; i += step) {
-            double s = (1. / 2) * g * i * i;
+            double s = (1./2) * g * i * i;
             System.out.printf("Zeit: %d Sekunden: Zurückgelegte Strecke: %.4f m%n", i, s);
-            if (i <= t - step) sleep(step);
-        }
-    }
-
-    public static void sleep(int s) {
-        try {
-            Thread.sleep(s * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            if (i <= t - step) sleep.accept(step);
         }
     }
 }
