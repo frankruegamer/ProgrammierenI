@@ -9,7 +9,7 @@ public class FreierFall {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Bitte Falldauer in Sekunden eingeben:");
+        System.out.print("Bitte Falldauer in Sekunden eingeben: ");
         try {
             freierFall(sc.nextInt());
         } catch (InputMismatchException e) {
