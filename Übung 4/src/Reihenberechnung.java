@@ -1,8 +1,9 @@
-import java.util.function.Function;
-
 /**
  * Created by Frank on 02.11.2015.
  */
+
+import java.util.function.Function;
+
 public class Reihenberechnung {
 
     public static void main(String[] args) {
