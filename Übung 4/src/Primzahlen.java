@@ -17,6 +17,8 @@ public class Primzahlen {
                 System.out.println("Untersuchte Zahl ist keine Primzahl !");
             }
         } catch (InputMismatchException e) {
+        } finally {
+            sc.close();
         }
     }
 
