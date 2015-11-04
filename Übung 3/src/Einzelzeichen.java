@@ -1,6 +1,7 @@
 /**
  * Created by Frank on 26.10.2015.
  */
+
 public class Einzelzeichen {
 
     public static void main(String[] args) {

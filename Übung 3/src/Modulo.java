@@ -1,6 +1,7 @@
 /**
  * Created by Frank on 26.10.2015.
  */
+
 public class Modulo {
 
     public static void main(String[] args) {
