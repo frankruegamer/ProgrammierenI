@@ -15,6 +15,8 @@ public class FreierFall {
             freierFall(sc.nextInt());
         } catch (InputMismatchException e) {
             System.out.println("Bitte eine Zahl eingeben!");
+        } finally {
+            sc.close();
         }
     }
 
