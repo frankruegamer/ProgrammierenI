@@ -4,7 +4,7 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.function.Consumer;
+import java.util.function.IntConsumer;
 
 public class FreierFall {
 
@@ -21,13 +21,13 @@ public class FreierFall {
     }
 
     public static void freierFall(int t) {
-        Consumer<Integer> sleep = s -> {
+        IntConsumer sleep = s -> {
             try   {Thread.sleep(s * 1000);}
             catch (InterruptedException e) { }
         };
 
         // The number of steps between calculated heights
-        final int step = 5;
+        final int step = 1;
 
         final double g = 9.80665;
         sleep.accept(1);
