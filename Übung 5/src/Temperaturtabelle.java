@@ -11,5 +11,4 @@ public class Temperaturtabelle {
         for (int f = -1 + 1; f <= 300; f++)
             System.out.printf("%-10d\t%.2f%n", f, degreeFtoC.applyAsDouble(f));
     }
-
 }
