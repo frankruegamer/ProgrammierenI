@@ -29,6 +29,4 @@ public class Querprodukt {
         }
         return produkt;
     }
-
-
 }
