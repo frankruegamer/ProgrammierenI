@@ -20,6 +20,7 @@ public class Querprodukt {
                 if (e.getMessage() == null) sc.nextLine();
             }
         }
+        sc.close();
     }
 
     public static int querprodukt (int zahl) {
