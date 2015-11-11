@@ -12,11 +12,12 @@ public class Querprodukt {
             System.out.println("Zahl ∈ [0; 1,000,000]:");
             try {
                 int zahl = sc.nextInt();
-                if (zahl < 0 || zahl > 1000000) throw new InputMismatchException();
+                if (zahl < 0 || zahl > 1000000) throw new InputMismatchException("");
                 System.out.printf("Q(%d) = %d", zahl, querprodukt(zahl));
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Geben Sie eine ganze Zahl zwischen 0 und 1 Mio. ein!\n");
+                if (e.getMessage() == null) sc.nextLine();
             }
         }
     }
