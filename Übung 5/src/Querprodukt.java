@@ -24,10 +24,10 @@ public class Querprodukt {
 
     public static int querprodukt (int zahl) {
         int produkt = 1;
-        while (zahl != 0) {
+        do {
             produkt *= (zahl % 10);
             zahl /= 10;
-        }
+        } while (zahl != 0);
         return produkt;
     }
 }
