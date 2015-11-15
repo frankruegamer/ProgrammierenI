@@ -9,14 +9,11 @@ import java.util.function.IntConsumer;
 public class FreierFall {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Bitte Falldauer in Sekunden eingeben: ");
-        try {
+        try (Scanner sc = new Scanner(System.in)) {
             freierFall(sc.nextInt());
         } catch (InputMismatchException e) {
             System.out.println("Bitte eine Zahl eingeben!");
-        } finally {
-            sc.close();
         }
     }
 
