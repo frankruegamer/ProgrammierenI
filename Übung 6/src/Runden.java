@@ -4,12 +4,11 @@
 public class Runden {
 
     public static void main(String[] args) {
-        System.out.println(runden(5.94));
-        // -> 6
-        System.out.println(runden(5.34));
-        // -> 5
-        System.out.println(runden(5));
-        // -> 5
+        double zahl = 7.123456;
+        System.out.println(runden(zahl, 4));
+        // -> 7.1235
+        System.out.println(runden(zahl, 3));
+        // -> 7.123
     }
 
     public static int runden (double zahl) {
@@ -18,5 +17,10 @@ public class Runden {
         } else {
             return (int) zahl+1;
         }
+    }
+
+    public static double runden (double zahl, int stellen) {
+        double factor = Double.parseDouble(Integer.toBinaryString(2<<stellen-1));
+        return runden(zahl*factor) / factor;
     }
 }
