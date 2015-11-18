@@ -1,15 +1,17 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 /**
  * Created by frank on 16.11.15.
  */
 public class PiRechteckannaeherung {
 
     public static void main(String[] args) {
-        System.out.println(piAnnaeherung(1));
-        // -> 4.0
-        System.out.println(piAnnaeherung(5));
-        // -> 3.4370488288835515
-        System.out.println(piAnnaeherung(1000000));
-        // -> 3.1415946524138207
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Wie viele Rechtecke möchten Sie für die Annäherung verwenden?");
+            System.out.printf("Pi ≈ %f", piAnnaeherung(sc.nextInt()));
+        } catch (InputMismatchException e) {
+        }
     }
 
     public static double piAnnaeherung (int anzahl) {
