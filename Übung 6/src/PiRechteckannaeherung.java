@@ -10,7 +10,7 @@ public class PiRechteckannaeherung {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Wie viele Rechtecke möchten Sie für die Annäherung verwenden?");
             System.out.printf("Pi ≈ %f", piAnnaeherung(sc.nextInt()));
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException ignored) {
         }
     }
 
