@@ -1,5 +1,6 @@
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -11,7 +12,9 @@ public class ArithmetischesMittel {
         DecimalFormat numberFormat = new DecimalFormat("0.######");
         System.out.print("Anzahl der einzulesenden Werte: ");
         try (Scanner sc = new Scanner(System.in)) {
-            double[] messwerte = new double [sc.nextInt()];
+            int anzahl = sc.nextInt();
+            if (anzahl < 1) throw new InputMismatchException();
+            double[] messwerte = new double [anzahl];
             for (int i = 0; i < messwerte.length; i++) {
                 System.out.printf("%d.Wert:\t", (i+1));
                 messwerte[i] = sc.nextDouble();
@@ -22,6 +25,8 @@ public class ArithmetischesMittel {
             System.out.printf("Groesster Wert: %s%n", numberFormat.format(messwerte[messwerte.length-1]));
             System.out.printf("Arithmetischer Mittelwert: %s%n", numberFormat.format(mean(messwerte)));
             System.out.printf("Standardabweichung: %f%n", deviation(messwerte));
+        } catch (InputMismatchException e) {
+            System.out.println("Geben Sie eine Zahl größer 0 ein!");
         }
     }
 
