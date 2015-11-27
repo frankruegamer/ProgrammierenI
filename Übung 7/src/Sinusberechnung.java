@@ -1,10 +1,19 @@
+import java.text.DecimalFormat;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 /**
  * Created by frank on 26.11.15.
  */
 public class Sinusberechnung {
 
     public static void main(String[] args) {
-        System.out.println(sinus(Math.PI/2));
+        DecimalFormat numberFormat = new DecimalFormat("0.######");
+        System.out.print("sin(x) <- ");
+        try (Scanner sc = new Scanner(System.in)) {
+            double input = sc.nextDouble();
+            System.out.printf("sin(%s) ≈ %s", numberFormat.format(input), numberFormat.format(sinus(input)));
+        } catch (InputMismatchException ignored) { }
     }
 
     public static double sinus (double x) {
