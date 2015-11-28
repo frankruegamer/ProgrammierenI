@@ -47,8 +47,12 @@ public class Pizzarechner {
 
     public static void pizzaVergleichen (Pizza p1, Pizza p2) {
         double[] ratio = {p1.ratio(), p2.ratio()};
-        int better = (ratio[0] - ratio[1]) < 0 ? 0 : 1;
-        System.out.printf("Pizza %d hat das bessere Preis-/Größenverhältnis von %.2f\u20ac/m²", better+1, ratio[better]);
+        if (ratio[0] == ratio[1])
+            System.out.println("Die Pizzen haben das gleiche Preis-Größenverhältnis");
+        else {
+            int better = (ratio[0] - ratio[1]) < 0 ? 0 : 1;
+            System.out.printf("Pizza %d hat das bessere Preis-/Größenverhältnis von %.2f\u20ac/m²", better + 1, ratio[better]);
+        }
     }
 }
 
