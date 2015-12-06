@@ -11,7 +11,7 @@ public class Array {
     }
 
     public static String spielen(String text) {
-        /*  Darf nicht wegen String-Methode 'indexOf( )' verwendet werden... : */
+        /* Darf nicht wegen String-Methode 'indexOf( )' verwendet werden... : */
         // Predicate<Character> isVocal = c -> "AEIOUaeiou".indexOf(c) != -1;
         Predicate<Character> isVocal = Arrays.asList('A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u')::contains;
 
