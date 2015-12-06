@@ -6,7 +6,7 @@ import java.util.function.IntPredicate;
  */
 public class Lottoziehung {
 
-    private static int[] lottozahlen = new int [6];
+    private static int[] lottozahlen = new int[6];
 
     public static void main(String[] args) {
         IntPredicate contains = x -> {
