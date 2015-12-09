@@ -50,12 +50,12 @@ public class Galgenmännchen {
             System.out.println();
             try {
                 char input = Character.toLowerCase(sc.nextLine().charAt(0));
-                do {
+                while (true) {
                     int index = String.valueOf(template).toLowerCase().indexOf(input);
                     if (index == -1) break;
                     eingabe[index] = template[index];
                     template[index] = '\0';
-                } while (true);
+                }
             } catch (InputMismatchException ignored) {
             }
             if (new String(template).replace("\0", "").equals("")) {
