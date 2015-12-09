@@ -1,25 +1,18 @@
 import java.util.Arrays;
-import java.util.function.IntPredicate;
 
 /**
  * Created by frank on 06.12.15.
  */
 public class Lottoziehung {
 
-    private static int[] lottozahlen = new int[6];
+    private static Integer[] lottozahlen = new Integer[6];
 
     public static void main(String[] args) {
-        IntPredicate contains = x -> {
-            for (int lottozahl : lottozahlen)
-                if (lottozahl == x) return true;
-            return false;
-        };
-
         /* Initialisieren */
         for (int i = 0; i < lottozahlen.length; i++) {
             int newRandomint;
             do newRandomint = (int) (Math.random() * 49 + 1);
-            while (contains.test(newRandomint));
+            while (Arrays.asList(lottozahlen).contains(newRandomint));
             lottozahlen[i] = newRandomint;
         }
         /* Sortieren */
