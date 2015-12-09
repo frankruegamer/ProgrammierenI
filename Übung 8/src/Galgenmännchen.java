@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Scanner;
 import java.util.function.Consumer;
 
 /**
@@ -31,8 +34,8 @@ public class Galgenmännchen {
 
     public static void main(String[] args) {
         String loesung = wordList[new Random().nextInt(wordList.length)];
-        char[] temp = loesung.toCharArray();
-        char[] eingabe = new char[temp.length];
+        char[] template = loesung.toCharArray();
+        char[] eingabe = new char[template.length];
         Arrays.fill(eingabe, '_');
 
         Scanner sc = new Scanner(System.in);
@@ -48,14 +51,14 @@ public class Galgenmännchen {
             try {
                 char input = Character.toLowerCase(sc.nextLine().charAt(0));
                 do {
-                    int index = String.valueOf(temp).toLowerCase().indexOf(input);
+                    int index = String.valueOf(template).toLowerCase().indexOf(input);
                     if (index == -1) break;
-                    eingabe[index] = temp[index];
-                    temp[index] = '\0';
+                    eingabe[index] = template[index];
+                    template[index] = '\0';
                 } while (true);
             } catch (InputMismatchException ignored) {
             }
-            if (new String(temp).replace("\0", "").equals("")) {
+            if (new String(template).replace("\0", "").equals("")) {
                 System.out.println("Glückwunsch!");
                 break;
             }
