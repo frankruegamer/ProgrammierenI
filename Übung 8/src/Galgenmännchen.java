@@ -58,7 +58,7 @@ public class Galgenmännchen {
                 }
             } catch (InputMismatchException ignored) {
             }
-            if (new String(template).replace("\0", "").equals("")) {
+            if (String.valueOf(template).replace("\0", "").equals("")) {
                 System.out.println("Glückwunsch!");
                 break;
             }
