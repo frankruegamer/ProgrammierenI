@@ -14,7 +14,7 @@ public class Verkäufer {
         autoliste.add(new Auto("VW", "Typ 2 T1", 1131, "bunt"));
         Auto greatest = Auto.DUMMY;
         for (Auto car : autoliste)
-            greatest = car.getHubraum() > greatest.getHubraum() ? car : greatest;
+            if (car.getHubraum() > greatest.getHubraum()) greatest = car;
         System.out.println(greatest);
     }
 }
