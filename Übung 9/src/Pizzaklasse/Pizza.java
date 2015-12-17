@@ -9,8 +9,17 @@ import java.util.ArrayList;
 public class Pizza {
 
     private String name;
-    private ArrayList<Integer> durchmesser = new ArrayList<>();
-    private ArrayList<Float> preis = new ArrayList<>();
+    private ArrayList<Pizzacombo> kombinationen = new ArrayList<>();
+
+    private class Pizzacombo {
+        int durchmesser;
+        float preis;
+
+        public Pizzacombo(int durchmesser, float preis) {
+            this.durchmesser = durchmesser;
+            this.preis = preis;
+        }
+    }
 
     public Pizza(String name, int durchmesser, float preis) {
         this.name = name;
@@ -18,7 +27,6 @@ public class Pizza {
     }
 
     public void addPizzaCombo(int durchmesser, float preis) {
-        this.durchmesser.add(durchmesser);
-        this.preis.add(preis);
+        kombinationen.add(new Pizzacombo(durchmesser, preis));
     }
 }
