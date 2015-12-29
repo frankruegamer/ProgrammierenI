@@ -9,7 +9,7 @@ public class Parameterübergabe {
             System.exit(1);
         }
         try {
-            System.out.println(Integer.parseInt(args[0]) * Integer.parseInt(args[1]));
+            System.out.println(Double.parseDouble(args[0]) * Double.parseDouble(args[1]));
         } catch (NumberFormatException ignored) {
         }
     }
