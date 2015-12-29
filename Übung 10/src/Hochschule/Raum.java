@@ -49,7 +49,7 @@ public class Raum {
 
     //region Aufgabe 4
     public void betreteRaum (Student s) {
-        for (int i = 0 ; i < studenten.length; i++)
+        for (int i = 0 ; i < maxStudenten; i++)
             if (studenten[i] == null) {
                 System.out.printf("%s betritt %s.%n", s, this.kennung);
                 studenten[i] = s;
@@ -58,11 +58,11 @@ public class Raum {
     }
 
     public void verlasseRaum (Student s) {
-        for (int i = 0; i < studenten.length; i++) {
+        for (int i = 0; i < maxStudenten; i++) {
             boolean repeat = false;
             do if (studenten[i] == null) {
                 repeat = false;
-                if (i == studenten.length - 1) continue;
+                if (i + 1 == maxStudenten) continue;
                 studenten[i] = studenten[i + 1];
                 studenten[i + 1] = null;
             } else if (studenten[i].equals(s)) {
