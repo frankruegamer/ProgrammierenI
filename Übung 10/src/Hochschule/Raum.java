@@ -51,7 +51,7 @@ public class Raum {
     public void betreteRaum (Student s) {
         for (int i = 0 ; i < studenten.length; i++)
             if (studenten[i] == null) {
-                System.out.println(s + " betritt den Raum.");
+                System.out.printf("%s betritt %s.%n", s, this.kennung);
                 studenten[i] = s;
                 break;
             } else if (studenten[i].equals(s)) break;
@@ -66,7 +66,7 @@ public class Raum {
                 studenten[i] = studenten[i + 1];
                 studenten[i + 1] = null;
             } else if (studenten[i].equals(s)) {
-                System.out.println(s + " verlässt den Raum");
+                System.out.printf("%s verlässt %s.%n", s, this.kennung);
                 studenten[i] = null;
                 repeat = true;
             } while (repeat);
