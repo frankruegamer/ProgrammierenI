@@ -1,7 +1,7 @@
 /**
  * Created by Frank on 29.12.2015.
  */
-public class Testuhr {
+public class TestUhr {
 
     public static void main(String[] args) {
         Uhr[] weltzeit = new Uhr[24];
