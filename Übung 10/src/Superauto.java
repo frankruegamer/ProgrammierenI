@@ -14,7 +14,7 @@ public class Superauto extends Autoklasse.Auto{
         produzierteAutos++;
     }
 
-    public int berechneUmsatz (int duchschnittspreis) {
+    public static int berechneUmsatz (int duchschnittspreis) {
         return Superauto.produzierteAutos*duchschnittspreis;
     }
 }
