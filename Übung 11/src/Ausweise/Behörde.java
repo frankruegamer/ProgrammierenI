@@ -11,8 +11,8 @@ public class Behörde {
             new Ausweis ("Drogo", "Beutlin", "männlich"),
             new Studentenausweis ("Frodo", "Beutlin", "männlich", 3791),
             new Studentenausweis ("Sam", "Gamdschie", "männlich", 2980),
-            new Vereinsausweis ("Merry", "Brandybock", "männlich", "Fellowship of the Ring"),
-            new Vereinsausweis ("Pippin", "Tuk", "männlich", "Fellowship of the Ring")
+            new Vereinsausweis ("Merry", "Brandybock", "männlich", "Die Gefährten"),
+            new Vereinsausweis ("Pippin", "Tuk", "männlich", "Die Gefährten")
         };
     }
 
