@@ -5,9 +5,7 @@ package Hochschule;
  */
 public class Vorlesung {
 
-    private String name;
-    private String dozent;
-    private String studiengang;
+    private String name, dozent, studiengang;
 
     public Vorlesung(String name, String dozent, String studiengang) {
         this.name = name;
