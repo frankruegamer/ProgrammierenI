@@ -72,9 +72,9 @@ public class Raum {
             } while (repeat);
         }
     }
-    //endregion
 
     public void listStudenten () {
         System.out.println(Arrays.toString(studenten));
     }
+    //endregion
 }
