@@ -11,7 +11,7 @@ public class Hochschule {
         for (int i = 1; i <= 2; i++) {
             System.out.println("Raum 1: " + raum1.istBelegt());
             System.out.println("Raum 2: " + raum2.istBelegt());
-            if (i == 1) raum1.belegen(new Vorlesung("Programmieren I", "Heinzl", "INF"));
+            if (i == 1) raum1.belegen(new Vorlesung("Programmieren I", "Heinzl", "BIN"));
         }
         Student[] studenten = {
                 new Student("Peter"),
